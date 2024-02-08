@@ -4,9 +4,13 @@
     {
         DateTime GetNow();
     }
+
     public class DateTimeProvider : IDateTimeProvider
     {
-        public DateTimeProvider() { }
-        public DateTime GetNow() { return DateTime.UtcNow; }
+        public DateTimeProvider()
+        { }
+
+        public DateTime GetNow()
+        { return DateTime.UtcNow; }
     }
 }

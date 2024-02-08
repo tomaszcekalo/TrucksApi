@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TrucksApi.Data
+﻿namespace TrucksApi.Data
 {
     public enum TruckStatusEnum
     {
@@ -10,6 +8,7 @@ namespace TrucksApi.Data
         AtJob,
         Returning
     }
+
     public static class TruckStatusEnumExtensions
     {
         public static string ToFriendlyString(this TruckStatusEnum tse)
@@ -18,10 +17,13 @@ namespace TrucksApi.Data
             {
                 case TruckStatusEnum.OutOfService:
                     return "Out Of Service";
+
                 case TruckStatusEnum.ToJob:
                     return "To Job";
+
                 case TruckStatusEnum.AtJob:
                     return "At Job";
+
                 default:
                     return tse.ToString();
             }
